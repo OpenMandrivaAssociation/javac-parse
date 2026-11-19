@@ -1,0 +1,18 @@
+--- a/src/main/java/org/plumelib/javacparse/JavacParseResult.java	2026-08-05 19:25:11.000000000 +0200
++++ b/src/main/java/org/plumelib/javacparse/JavacParseResult.java	2026-11-19 18:49:35.798790230 +0100
+@@ -43,6 +43,15 @@
+     return sj.toString();
+   }
+ 
++  /**
++   * Returns the parse tree. Callers compiled against 0.9.0 use this name.
++   *
++   * @return the parse tree
++   */
++  public T getTree() {
++    return tree;
++  }
++
+   @Override
+   @SuppressWarnings({
+     "allcheckers:purity.not.sideeffectfree.call",
